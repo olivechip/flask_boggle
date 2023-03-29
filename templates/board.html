@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Boggle Game
+{% endblock %}
+
+{% block content %}
+    {% for list in game %}
+        <p>{{ list }}</p>
+    {% endfor %}
+
+    <form action="/guess">
+        <input placeholder="Enter word" name="guess" id="guessValue"> 
+        <button id="guessButton">Guess!</button>
+    </form>
+{% endblock %}
