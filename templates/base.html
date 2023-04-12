@@ -8,8 +8,15 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
+    <h1>Boggle</h1>
     {% block content %}
     {% endblock %}
+    <p id="response"></p>
+    <p>Score: <span id="score">0</span></p>
+    <p>Time Remaining: <span id="time"></span></p>
+    <p>Current Hi-score: <span id="high_score">{{ high_score }}</span></p>
+    <button id="reset">Reset Hi-score</button>
+
     <script src="static/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
